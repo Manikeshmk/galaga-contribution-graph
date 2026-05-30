@@ -1,7 +1,7 @@
 import core from '@actions/core';
 import fs from 'fs';
 import path from 'path';
-import { GalagaRenderer } from './src/galaga/index.js';
+import { GalagaRenderer } from './src/galaga/index.ts'; // Changed from .js to .ts
 
 async function run() {
   try {
