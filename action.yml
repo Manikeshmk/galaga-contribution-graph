@@ -1,0 +1,13 @@
+name: 'Galaga Contribution Graph Engine'
+description: 'Generates a stylized retro space shooter simulation based on your commit calendar intensity.'
+author: 'manikeshmk'
+branding:
+  icon: 'activity'
+  color: 'purple'
+inputs:
+  github_token:
+    description: 'The automated workflow installation secret token.'
+    required: true
+runs:
+  using: 'node20'
+  main: 'index.js'
