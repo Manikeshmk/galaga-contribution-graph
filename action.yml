@@ -9,5 +9,16 @@ inputs:
     description: 'The automated workflow installation secret token.'
     required: true
 runs:
-  using: 'node20'
-  main: 'index.js'
+  using: 'composite' # Changed to composite to allow a pre-install step
+  steps:
+    - name: Install Dependencies
+      run: npm install
+      shell: bash
+      working-directory: ${{ github.action_path }}
+      
+    - name: Run Engine
+      run: node index.js
+      shell: bash
+      working-directory: ${{ github.action_path }}
+      env:
+        INPUT_GITHUB_TOKEN: ${{ inputs.github_token }}
