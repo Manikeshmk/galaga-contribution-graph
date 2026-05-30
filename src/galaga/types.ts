@@ -1,4 +1,4 @@
-import { BaseConfig, BaseStore } from '../shared/types.ts';
+import { BaseConfig, BaseStore } from '../shared/types.js';
 
 export interface GalagaShip {
 	x: number;
