@@ -1,0 +1,10 @@
+{
+  "name": "galaga-contribution-graph",
+  "version": "1.0.0",
+  "description": "Transforms your GitHub contribution calendar into an animated Galaga arcade vector asset.",
+  "type": "module",
+  "main": "index.js",
+  "dependencies": {
+    "@octokit/graphql": "^8.2.1"
+  }
+}
