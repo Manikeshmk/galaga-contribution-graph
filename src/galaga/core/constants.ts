@@ -1,4 +1,4 @@
-export { CELL_SIZE, DELTA_TIME, GAME_THEMES, GAP_SIZE, GRID_HEIGHT, GRID_WIDTH } from '../../shared/constants.ts';
+export { CELL_SIZE, DELTA_TIME, GAME_THEMES, GAP_SIZE, GRID_HEIGHT, GRID_WIDTH } from '../../shared/constants.js';
 
 export const SHIP_Y = 10.5;
 export const SHIP_SPEED = 0.4;
