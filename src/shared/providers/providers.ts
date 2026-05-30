@@ -1,4 +1,4 @@
-import { ContributionDay } from '../types.ts';
+import { ContributionDay } from '../types.js';
 
 export const Providers = {
 	async fetchGithubContributions(store: any): Promise<ContributionDay[]> {
