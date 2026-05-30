@@ -15,12 +15,11 @@ runs:
       run: npm install
       shell: bash
       working-directory: ${{ github.action_path }}
-
-    # Bundles your engine code into a single executable file and runs it
+# Bundles your engine code into a stable CommonJS executable
     - name: Bundle and Run Engine
       run: |
-        npx esbuild index.js --bundle --platform=node --format=esm --outfile=dist-action/run.js --allow-overwrite --out-extension:.js=.js
-        node dist-action/run.js
+        npx esbuild index.js --bundle --platform=node --format=cjs --outfile=dist-action/run.cjs --allow-overwrite --out-extension:.js=.js
+        node dist-action/run.cjs
       shell: bash
       working-directory: ${{ github.action_path }}
       env:
