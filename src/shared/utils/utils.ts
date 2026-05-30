@@ -1,6 +1,5 @@
-import { CELL_SIZE, GAME_THEMES, GAP_SIZE, GRID_HEIGHT, GRID_WIDTH } from '../constants';
-import { ContributionGridCell, BaseStore } from '../types';
-
+import { CELL_SIZE, GAME_THEMES, GAP_SIZE, GRID_HEIGHT, GRID_WIDTH } from '../constants.ts';
+import { ContributionGridCell, BaseStore } from '../types.ts';
 export const Utils = {
 	getCurrentTheme(store: any) {
 		const themeName = store.config?.gameTheme || 'github';
