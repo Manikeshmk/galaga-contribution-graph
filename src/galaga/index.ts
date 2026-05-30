@@ -3,7 +3,7 @@ import { Utils } from '../shared/utils/utils.ts';
 import { GalagaGame } from './core/game.ts';
 import { GalagaStore } from './core/store.ts';
 import { GalagaConfig, GalagaStoreType } from './types.ts';
-export { GalagaConfig } from './types';
+export { GalagaConfig } from './types.ts';
 
 export class GalagaRenderer {
 	store!: GalagaStoreType;
