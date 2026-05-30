@@ -29,29 +29,11 @@ export const EXPLOSION_FRAMES = 7;
 
 /* ─────────────── Bullet image ─────────────── */
 /** Bullet sprite height in grid units (sprite is 20px, slot is 22px) — used for leading-edge collision */
+/* ─────────────── Bullet image ─────────────── */
+/** Bullet sprite height in grid units (sprite is 20px, slot is 22px) — used for leading-edge collision */
 export const BULLET_SPRITE_HEIGHT_GU = 20 / 22;
 
-// Clean XML vector asset for laser projectile streams
-export const BULLET_IMAGE_DATA = `data:image/svg+xml;utf8,
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 20">
-	<rect x="4" y="2" width="2" height="16" fill="%2300ffff" rx="1"/>
-	<rect x="3" y="6" width="4" height="8" fill="%23ffffff" opacity="0.7"/>
-</svg>`.replace(/\n/g, '').replace(/\t/g, '');
+export const BULLET_IMAGE_DATA = 'data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2010%2020%22%3E%3Crect%20x%3D%224%22%20y%3D%222%22%20width%3D%222%22%20height%3D%2216%22%20fill%3D%22%2300ffff%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%223%22%20y%3D%226%22%20width%3D%224%22%20height%3D%228%22%20fill%3D%22%23ffffff%22%20opacity%3D%220.7%22%2F%3E%3C%2Fsvg%3E';
 
 /* ───────────── Ship image ───────────── */
-// Clean vector blueprint matching the iconic custom 90-degree square console wings
-export const SHIP_IMAGE_DATA = `data:image/svg+xml;utf8,
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 35">
-	<rect x="0" y="16" width="6" height="14" fill="%23e11d48"/>
-	<rect x="2" y="10" width="4" height="6" fill="%23ffffff"/>
-	
-	<rect x="10" y="8" width="12" height="24" fill="%23ffffff"/>
-	<rect x="13" y="0" width="6" height="8" fill="%23e11d48"/>
-	
-	<rect x="26" y="16" width="6" height="14" fill="%23e11d48"/>
-	<rect x="26" y="10" width="4" height="6" fill="%23ffffff"/>
-	
-	<rect x="6" y="22" width="4" height="6" fill="%232563eb"/>
-	<rect x="22" y="22" width="4" height="6" fill="%232563eb"/>
-	<rect x="14" y="32" width="4" height="3" fill="%23ea580c"/>
-</svg>`.replace(/\n/g, '').replace(/\t/g, '');
+export const SHIP_IMAGE_DATA = 'data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2035%22%3E%3Crect%20x%3D%220%22%20y%3D%2216%22%20width%3D%226%22%20height%3D%2214%22%20fill%3D%22%23e11d48%22%2F%3E%3Crect%20x%3D%222%22%20y%3D%2210%22%20width%3D%224%22%20height%3D%226%22%20fill%3D%22%23ffffff%22%20%2F%3E%3Crect%20x%3D%2210%22%20y%3D%228%22%20width%3D%2212%22%20height%3D%2224%22%20fill%3D%22%23ffffff%22%2F%3E%3Crect%20x%3D%2213%22%20y%3D%220%22%20width%3D%226%22%20height%3D%228%22%20fill%3D%22%23e11d48%22%2F%3E%3Crect%20x%3D%2226%22%20y%3D%2216%22%20width%3D%226%22%20height%3D%2214%22%20fill%3D%22%23e11d48%22%2F%3E%3Crect%20x%3D%2226%22%20y%3D%2210%22%20width%3D%224%22%20height%3D%226%22%20fill%3D%22%23ffffff%22%20%2F%3E%3Crect%20x%3D%226%22%20y%3D%2222%22%20width%3D%224%22%20height%3D%226%22%20fill%3D%22%232563eb%22%2F%3E%3Crect%20x%3D%2222%22%20y%3D%2222%22%20width%3D%224%22%20height%3D%226%22%20fill%3D%22%232563eb%22%2F%3E%3Crect%20x%3D%2214%22%20y%3D%2232%22%20width%3D%224%22%20height%3D%223%22%20fill%3D%22%23ea580c%22%2F%3E%3C%2Fsvg%3E';
