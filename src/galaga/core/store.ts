@@ -1,4 +1,4 @@
-import type { GalagaConfig, GalagaStoreType } from '../types';
+import type { GalagaConfig, GalagaStoreType } from '../types.ts';
 
 export const GalagaStore: GalagaStoreType = {
 	frameCount: 0,
