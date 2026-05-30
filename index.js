@@ -1,4 +1,4 @@
-import * as core from '@actions/core'; // Changed to a wildcard named import
+import * as core from '@actions/core';
 import fs from 'fs';
 import path from 'path';
 import { GalagaRenderer } from './src/galaga/index.ts';
@@ -16,6 +16,7 @@ async function run() {
       username: owner,
       githubSettings: { accessToken: token },
       svgCallback: (svgContent) => {
+        // SAVES DIRECTLY TO THE PROFILE REPOSITORY WORKSPACE
         const outputDir = path.join(process.cwd(), 'dist');
         if (!fs.existsSync(outputDir)) {
           fs.mkdirSync(outputDir, { recursive: true });
@@ -33,7 +34,7 @@ async function run() {
 
     await renderer.start();
   } catch (error) {
-    core.setFailed(`Engine failure: ${error.message}`); // Will resolve perfectly now
+    core.setFailed(`Engine failure: ${error.message}`);
   }
 }
 
