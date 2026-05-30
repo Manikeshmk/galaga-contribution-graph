@@ -1,7 +1,6 @@
 {
   "name": "galaga-contribution-graph",
   "version": "1.0.0",
-  "type": "module",
   "main": "index.js",
   "dependencies": {
     "@actions/core": "^1.11.1",
