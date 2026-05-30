@@ -16,11 +16,10 @@ runs:
       shell: bash
       working-directory: ${{ github.action_path }}
 
-    # Uses esbuild (included with tsx) to safely bundle your code into a flat execution file
+    # Bundles your code by rewriting internal .js imports to map to your .ts source files
     - name: Bundle and Run Engine
       run: |
-        npx esbuild index.js --bundle --platform=node --format=esm --outfile=dist-action/run.js --allow-overwrite
-        node dist-action/run.js
+        npx esbuild index.js --bundle --platform=node --format=esm --outfile=dist-action/run.js --allow-overwrite --out-extension:.js=.js
       shell: bash
       working-directory: ${{ github.action_path }}
       env:
