@@ -16,13 +16,15 @@ async function run() {
       username: owner,
       githubSettings: { accessToken: token },
       svgCallback: (svgContent) => {
-        // SAVES DIRECTLY TO THE PROFILE REPOSITORY WORKSPACE
-        const outputDir = path.join(process.cwd(), 'dist');
+        // Forces the file to save directly in the profile repo's main root workspace
+        const workspacePath = process.env.GITHUB_WORKSPACE || process.cwd();
+        const outputDir = path.join(workspacePath, 'dist');
+        
         if (!fs.existsSync(outputDir)) {
           fs.mkdirSync(outputDir, { recursive: true });
         }
         fs.writeFileSync(path.join(outputDir, 'galaga.svg'), svgContent);
-        core.info('🎯 SVG pipeline output compiled successfully to dist/galaga.svg');
+        core.info(`🎯 SVG pipeline output compiled successfully to ${path.join(outputDir, 'galaga.svg')}`);
       },
       gameOverCallback: () => {
         core.info('🎮 Simulation cycle completed successfully.');
