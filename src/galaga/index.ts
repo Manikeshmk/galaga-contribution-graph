@@ -1,9 +1,9 @@
-import { Providers } from '../shared/providers/providers.ts';
-import { Utils } from '../shared/utils/utils.ts';
-import { GalagaGame } from './core/game.ts';
-import { GalagaStore } from './core/store.ts';
-import { GalagaConfig, GalagaStoreType } from './types.ts';
-export { GalagaConfig } from './types.ts';
+import { Providers } from '../shared/providers/providers.js';
+import { Utils } from '../shared/utils/utils.js';
+import { GalagaGame } from './core/game.js';
+import { GalagaStore } from './core/store.js';
+import { GalagaConfig, GalagaStoreType } from './types.js';
+export { GalagaConfig } from './types.js';
 
 export class GalagaRenderer {
 	store!: GalagaStoreType;
