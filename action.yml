@@ -15,9 +15,12 @@ runs:
       run: npm install
       shell: bash
       working-directory: ${{ github.action_path }}
-      
-    - name: Run Engine via TSX Compiler
-      run: npx tsx index.js
+
+    # Uses esbuild (included with tsx) to safely bundle your code into a flat execution file
+    - name: Bundle and Run Engine
+      run: |
+        npx esbuild index.js --bundle --platform=node --format=esm --outfile=dist-action/run.js --allow-overwrite
+        node dist-action/run.js
       shell: bash
       working-directory: ${{ github.action_path }}
       env:
