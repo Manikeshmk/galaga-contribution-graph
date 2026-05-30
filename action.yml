@@ -1,23 +1,23 @@
 name: 'Galaga Contribution Graph Engine'
-description: 'Generates a stylized retro space shooter simulation based on your commit calendar intensity.'
+description: 'Generates an animated space shooter simulation from your commit activity'
 author: 'manikeshmk'
 branding:
   icon: 'activity'
   color: 'purple'
 inputs:
   github_token:
-    description: 'The automated workflow installation secret token.'
+    description: 'The installation secret token'
     required: true
 runs:
-  using: 'composite' # Changed to composite to allow a pre-install step
+  using: 'composite'
   steps:
-    - name: Install Dependencies
+    - name: Install Runtime Dependencies
       run: npm install
       shell: bash
       working-directory: ${{ github.action_path }}
       
-    - name: Run Engine
-      run: node index.js
+    - name: Run Engine via TSX Compiler
+      run: npx tsx index.js
       shell: bash
       working-directory: ${{ github.action_path }}
       env:
