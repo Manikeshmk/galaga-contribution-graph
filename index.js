@@ -1,4 +1,4 @@
-import core from '@actions/core';
+import * as core from '@actions/core'; // Changed to a wildcard named import
 import fs from 'fs';
 import path from 'path';
 import { GalagaRenderer } from './src/galaga/index.ts';
@@ -33,7 +33,7 @@ async function run() {
 
     await renderer.start();
   } catch (error) {
-    core.setFailed(`Engine failure: ${error.message}`);
+    core.setFailed(`Engine failure: ${error.message}`); // Will resolve perfectly now
   }
 }
 
